@@ -9,7 +9,8 @@ import TagGif from "./components/TagGif";
 export default function App() {
 
 
-  return <div className="background">
+  return <div className="background pt-3
+  ">
       
         <Navbar/>
         <RandomGif/>

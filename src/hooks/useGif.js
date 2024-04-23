@@ -11,9 +11,14 @@ const useGif = (tag) => {
 
     async function fetchData(tag){
        setLoading(true)
-        const {data} = await axios.get(tag?(`${url}&tag=${tag}`):(url));
-        const image =data.data.images.downsized_large.url;
+        try{
+            const {data} = await axios.get(tag?(`${url}&tag=${tag}`):(url));
+        const image =data.images.url;
          setGif(image);
+        }
+        catch(err){
+            console.log("nhi aarha gif")
+        }
          setLoading(false)
     } 
     useEffect(()=>{
