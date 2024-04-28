@@ -5,7 +5,7 @@ const RandomGif =()=>{
       const {gif ,loading, fetchData} = useGif();
      
     return <div className="flex flex-col gap-6 items-center  m-auto justify-evenly border-solid border-black border-2 max-w-md">
-          <h2>A Random Gif</h2>
+          <h2 className="border-solid border-black border-2 b-r-1">A Random Gif</h2>
      <div>
         {
             loading?( <Spinner/>):(
